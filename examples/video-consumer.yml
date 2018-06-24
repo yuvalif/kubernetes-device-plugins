@@ -5,8 +5,8 @@ metadata:
 spec:
   containers:
   - name: video-capture
-    image: jareware/ffmpeg 
-    command: ["ffmpeg", "-f", "v4l2", "-framerate", "25", "-video_size", "640x480", "-i", "/dev/video0", "output.mkv"]
+    image: yuvalif/ffmpeg 
+    command: ["ffmpeg", "-i", "/dev/video0", "output.mkv"]
     resources:
       limits:
         devices.kubevirt.io/video0: 1
